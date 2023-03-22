@@ -18,6 +18,9 @@ export const previewDocumentNode = ({
   apiVersion: string
   previewSecretId: `${string}.${string}`
 }): DefaultDocumentNodeResolver => {
+
+  return null
+
   return (S, { schemaType }) => {
     switch (schemaType) {
       case authorType.name:

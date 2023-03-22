@@ -71,7 +71,7 @@ export default defineType({
       to: [{ type: authorType.name }],
     }),
   ],
-  preview: {
+  /* preview: {
     select: {
       title: 'title',
       author: 'author.name',
@@ -86,5 +86,5 @@ export default defineType({
 
       return { title, media, subtitle: subtitles.join(' ') }
     },
-  },
+  }, */
 })
