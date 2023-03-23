@@ -1,3 +1,4 @@
+import HeadWrapper from 'components/HeadWrapper'
 import HomeHeroSection from 'components/HomeHeroSection'
 import { getAllPosts, getSettings } from 'lib/sanity.client'
 import { Post, Settings } from 'lib/sanity.queries'
@@ -11,7 +12,14 @@ interface PageProps {
 export default function Page(props: PageProps) {
   const { posts, settings } = props
 
-  return <HomeHeroSection />
+  return (
+    <>
+      <HeadWrapper settings={settings} />
+      <HomeHeroSection />
+    </>
+  )
+
+  
 }
 
 export const getStaticProps: GetStaticProps<PageProps> = async (ctx) => {
